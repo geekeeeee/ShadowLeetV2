@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "ShadowLeet",
+    "version": "1.0",
+    "description": "Convert leetcode contests into dark mode.",
+    "permissions": ["tabs", "activeTab"],
+    "icons": {
+      "48": "icons/icon48.png"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "48": "icons/icon48.png"
+      }
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://leetcode.com/contest/*"],
+        "js": ["content.js", "jq.min"],
+        "css": ["darkmode.css"]
+      }
+    ]
+  }
+  
